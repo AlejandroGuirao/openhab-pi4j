@@ -52,26 +52,6 @@ public class Pi4JActivator implements BundleActivator {
         bundleContext.registerService(GpioService.class.getName(), new GpioServiceImpl(), null);
         bundleContext.registerService(SystemInformationService.class.getName(), new SystemInformationServiceImpl(),null);
         bundleContext.registerService(NetworkInformationService.class.getName(), new NetworkInformationServiceImpl(),null);
-        /*
-         * try {
-         * GpioUtil.enableNonPrivilegedAccess();
-         * bundleContext.registerService(GpioService.class.getName(), new GpioServiceImpl(), null);
-         * bundleContext.registerService(SystemInformationService.class.getName(), new SystemInformationServiceImpl(),
-         * null);
-         * bundleContext.registerService(NetworkInformationService.class.getName(), new NetworkInformationServiceImpl(),
-         * null);
-         * } catch(Throwable ex) {
-         * logger.error(ex.toString());
-         * logger.error(ex.getMessage());
-         * for(StackTraceElement e : ex.getStackTrace()) {
-         * if(e.isNativeMethod()) {
-         * logger.info("native:" + e.getClassName() + ":" + e.getMethodName());
-         * } else {
-         * logger.info(e.getClassName() + ":" + e.getMethodName() + ":" + e.getLineNumber());
-         * }
-         * }
-         * }
-         */
         logger.info("Pi4J started");
     }
 
