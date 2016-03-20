@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Private-Package: com.pi4j.services.impl
+Ignore-Package: com.pi4j.services.impl
+Bundle-Activator: com.pi4j.services.impl.Pi4JActivator
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Name: openHAB Pi4J Binding
+Bundle-SymbolicName: org.openhab.io.pi4j
+Bundle-Vendor: openHAB.org
+Bundle-Version: 1.9.0
+Bundle-ManifestVersion: 2
+Bundle-Description: This is the Pi4J binding of the open Home Aut
+ omation Bus (openHAB)
+Service-Component: OSGI-INF/GpioService.xml,
+  OSGI-INF/NetworkInformationService.xml,
+  OSGI-INF/SystemInformationService.xml
+Import-Package: org.apache.commons.lang,
+ org.osgi.framework,
+ org.osgi.service.component,
+ org.osgi.service.event,
+ org.slf4j
+Bundle-ClassPath: .,
+ lib/pi4j-core.jar
+Export-Package: com.pi4j.io.gpio,
+ com.pi4j.io.gpio.event,
+ com.pi4j.io.gpio.i2c,
+ com.pi4j.io.gpio.serial,
+ com.pi4j.io.gpio.spi,
+ com.pi4j.io.gpio.w1,
+ com.pi4j.io.gpio.wdt,
+ com.pi4j.services,
+ com.pi4j.system,
+ com.pi4j.platform,
+ com.pi4j.wiringpi
+Bundle-DocURL: http://www.openhab.org
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+ 

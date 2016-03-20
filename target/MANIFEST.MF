@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-Description: This is the Pi4J binding of the open Home Automati
+ on Bus (openHAB)
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-SymbolicName: org.openhab.io.pi4j
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: openHAB.org
+Bundle-DocURL: http://www.openhab.org
+Import-Package: org.apache.commons.lang,org.osgi.framework,org.osgi.se
+ rvice.component,org.osgi.service.event,org.slf4j
+Export-Package: com.pi4j.io.gpio,com.pi4j.io.gpio.event,com.pi4j.io.gp
+ io.i2c,com.pi4j.io.gpio.serial,com.pi4j.io.gpio.spi,com.pi4j.io.gpio.
+ w1,com.pi4j.io.gpio.wdt,com.pi4j.services,com.pi4j.system,com.pi4j.pl
+ atform,com.pi4j.wiringpi
+Bundle-Name: openHAB Pi4J Binding
+Bundle-Version: 1.8.1.201603201501
+Bundle-ClassPath: .,lib/pi4j-core.jar
+Private-Package: com.pi4j.services.impl
+Ignore-Package: com.pi4j.services.impl
+Bundle-Activator: com.pi4j.services.impl.Pi4JActivator
+
